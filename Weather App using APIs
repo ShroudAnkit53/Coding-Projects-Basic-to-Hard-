@@ -1,0 +1,504 @@
+For all required images :- https://drive.google.com/drive/folders/11DaDI5-O_UwAMs4jBO6iHqPixBj-NbO1
+
+(i) About Page (about.html) :-
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="images/icon.jpg" type="image/x-icon">
+    <link rel="shortcut-icon" href="images/icon.jpg" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #00feba, #5b548a);
+        }
+
+        .card {
+            width: 450px;
+            /* Adjust width as needed */
+            height: 450px;
+            /* Adjust height as needed */
+            background: linear-gradient(135deg, #00feba, #5b548a);
+            color: white;
+            margin: 40px auto;
+            border-radius: 20px;
+            padding: 40px 35px;
+            text-align: center;
+            border: 1px transparent;
+        }
+        .card h2{
+            padding-bottom: 15px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+           <h2><u>About WeatherWizard</u></h2>
+           <span class="first">
+            "Introducing WeatherWizard, your ultimate companion for staying ahead of the elements. With a sleek and intuitive interface, WeatherWise delivers current weather information tailored to your location."
+           </span>
+           <br><br>
+           <span class="second">
+            Upon opening the app, users are greeted with a clean and visually appealing layout, showcasing the current weather conditions including temperature, humidity and wind speed. A dynamic background changes to reflect the current weather, whether it's sunny skies, a gentle rain, or a snow flurry.
+           </span>
+           <br><br>
+           <span class="third">
+            WeatherWizard combines accuracy, usability, and style to deliver a weather app that's as functional as it is beautiful. Download WeatherWise today and stay one step ahead of Mother Nature.
+           </span>
+        </div>
+    </div>
+</body>
+
+</html>
+
+(ii) Follow Page (follow.html) :-
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media Handles</title>
+    <script src="https://kit.fontawesome.com/301f9e9bdb.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/icon.jpg" type="image/x-icon">
+    <link rel="shortcut-icon" href="images/icon.jpg" type="image/x-icon">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        body {
+            background-image: url(images/nature.jpg);
+            background-size: 100vw;
+            height: 100vh;
+            margin: 0px;
+            width: 100vw;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Adjust this if needed */
+        }
+
+        .box {
+            width: 45vw;
+            /* Adjust width as needed */
+            height: 60vh;
+            /* Adjust height as needed */
+            background-color: transparent;
+            text-align: center;
+            /* Optional, to center text horizontally */
+            /* padding: 20px; */
+            /* Optional, adjust padding as needed */
+            color: rgb(20, 20, 20);
+            border: 3px solid rgba(255, 255, 255, .5);
+            border-radius: 15px;
+            padding: 30px 40px;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            cursor: pointer;
+            /* Adjust this if needed */
+        }
+
+        .box h1{
+            z-index: 20;
+            color: gold;
+        }
+
+        .social i {
+            margin-right: 10px;
+            font-size: 30px;
+            color: white;
+            /* Adjust this if needed */
+        }
+
+        .social p {
+            margin: 0;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .social p:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Social Media Handles</h1>
+            <div class="social">
+                <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/_.iamankitttt._/" style="text-decoration: none;">
+                    <p>Instagram</p>
+                </a>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-facebook"></i>
+                <a href="https://www.facebook.com/profile.php?id=100088206488676&mibextid=2JQ9oc"
+                    style="text-decoration: none;">
+                    <p>Facebook</p>
+                </a>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-x-twitter"></i>
+                <a href="https://twitter.com/AnkitSa74725194" style="text-decoration: none;">
+                    <p>X-Twitter</p>
+                </a>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/ankit-kumar-sahoo-9015b9271/" style="text-decoration: none;">
+                    <p>LinkedIn</p>
+                </a>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-github"></i>
+                <a href="https://github.com/ShroudAnkit53" style="text-decoration: none;">
+                    <p>GitHub</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+(iii) Main page (index.html) :-
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWizard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.jpg" type="image/x-icon">
+    <link rel="shortcut-icon" href="images/icon.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <ul>
+                <li><img src="images/icon.jpg" alt="" style="width: 55px; border-radius: 34px;"></li>
+                <li>WeatherWizard</li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="follow.html">Follow</a></li>
+                    <li><img src="images/user-2.jpeg" alt="" style="width: 55px; border-radius: 34px;"></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter City" spellcheck="false">
+            <button><img src="images/search.png" alt=""></button>
+        </div>
+        <div class="error">
+            <p>Invalid City Name Provided</p>
+        </div>
+        <div class="weather">
+            <img src="images/clear.png" class="weather-icon">
+            <h1 class="temp">29°C</h1>
+            <h2 class="city">Bhubaneswar</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png" class="img1">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                    <img src="images/wind.png" class="img2">
+                    <div>
+                        <p class="wind">5 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const apiKey = "2f07636eaefb326397c80981d1f177dc";
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+        const searchBox = document.querySelector(".search input");
+        const searchBtn = document.querySelector(".search button");
+        const weatherIcon = document.querySelector(".weather-icon");
+
+        async function checkWeather(city) {
+            const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+
+            if (response.status == 404) {
+                document.querySelector(".error").style.display = "block";
+                document.querySelector(".weather").style.display = "none";
+            }
+            else {
+                var data = await response.json();
+                console.log(data);
+
+                document.querySelector('.city').innerHTML = data.name;
+                document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + "°C";
+                document.querySelector('.humidity').innerHTML = data.main.humidity + "%";
+                document.querySelector('.wind').innerHTML = data.wind.speed + "km/h";
+
+                if (data.weather[0].main == "Clouds") {
+                    weatherIcon.src = "images/clouds.png";
+                }
+                else if (data.weather[0].main == "Rain") {
+                    weatherIcon.src = "images/rain.png";
+                }
+                else if (data.weather[0].main == "Snow") {
+                    weatherIcon.src = "images/snow.png";
+                }
+                else if (data.weather[0].main == "Clear") {
+                    weatherIcon.src = "images/clear.png";
+                }
+                else if (data.weather[0].main == "Drizzle") {
+                    weatherIcon.src = "images/drizzle.png";
+                }
+                else if (data.weather[0].main == "Mist") {
+                    weatherIcon.src = "images/mist.png";
+                }
+
+                document.querySelector(".weather").style.display = "block";
+                document.querySelector(".error").style.display = "none";
+            }
+        }
+
+        searchBtn.addEventListener("click", () => {
+            checkWeather(searchBox.value);
+        });
+    </script>
+
+</body>
+
+</html>
+
+(iv) Styling of Main Page (style.css) :-
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #222222;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(130, 115, 66);
+}
+
+nav .left{
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.card{
+    width: 90%;
+    max-width: 530px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: white;
+    margin: 40px auto ;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.search button img{
+    width: 15px;
+    align-items: center;
+}
+
+.weather-icon{
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1{
+    font-size: 55px;
+    font-weight: 500;
+}
+
+.weather h2{
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+}
+
+.wind {
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+.img1{
+    width: 60px;
+}
+  
+.img2{
+    margin-left: 90px;
+    width: 60px;
+}
+
+.humidity {
+  margin-right: 30px;
+  margin-left: 20px;
+}
+
+.humidity,.wind{
+    font-size: 25px;
+    margin-top: -6px;
+}
+
+.weather{
+    display: none;
+    color: gold;
+}
+
+.error{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Width */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #333;
+    /* Dark background color for the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #666;
+    /* Darker color for the scrollbar handle */
+    border-radius: 5px;
+    /* Rounded corners for the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+    /* Lighter color for the scrollbar handle on hover */
+}
