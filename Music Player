@@ -1,0 +1,1141 @@
+For All required images :- https://drive.google.com/drive/folders/1WYfsY8ZqT6TXUrenXfxAQ1F_AvMQVSkC
+
+(i) Login Page (login.html) :-
+<!--All HTML,CSS and JavaScript code is there-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatBlend - Login Page</title>
+    <script src="https://kit.fontawesome.com/301f9e9bdb.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="Assets/Wynk Music_logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Assets/Wynk Music_logo.png" type="image/x-icon">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(Assets/download\ \(1\).jpeg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .wrapper {
+            width: 420px;
+            color: white;
+            border: 3px solid rgba(255, 255, 255, .2);
+            border-radius: 15px;
+            padding: 30px 40px;
+        }
+
+        .wrapper form {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .wrapper h1 {
+            font-size: 34px;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 15px;
+            color: #14dd9e;
+            z-index: 20;
+        }
+
+        .wrapper .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 30px 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(255, 255, 255, .2);
+            border-radius: 40px;
+            font-size: 16px;
+            color: white;
+            padding: 20px 45px 20px 20px;
+        }
+
+        .input-box input::placeholder {
+            color: white;
+        }
+
+        .input-box i {
+            position: absolute;
+            right: 20px;
+            top: 30%;
+            transform: translate(-50%);
+            font-size: 20px;
+        }
+
+        .wrapper .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            margin: -15px 0 15px;
+        }
+
+        .remember-forgot label input {
+            accent-color: white;
+            text-decoration: none;
+        }
+
+        .remember-forgot a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+
+        .wrapper .btn {
+            width: 100%;
+            height: 45px;
+            background: white;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            font-size: 16px;
+            color: black;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .wrapper .register-link {
+            font-size: 15px;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin: 20px 0 15px;
+        }
+
+        .register-link p a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .register-link p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="" id="loginForm">
+            <h1>BeatBlend - Login Form</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" id="name" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Email" id="email" pattern="[A-Z a-z]+[0-9]+[@]+[a-z]+[.]+[com]+"
+                    required>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" id="password" required>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember Me</label>
+                <a href="#">Forgot Password</a>
+            </div>
+            <button type="submit" class="btn" onclick="checkLogin()">Login</button>
+            <div class="register-link">
+                <p>Don't have an account?<a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        alert("Welcome to BeatBlend Login Page.Fill the login form to proceed next.")
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            var password = document.getElementById("password").value;
+            // Check if the password is correct
+            if (password === "Messi34") {
+                alert("Login successfully.Enjoy your time with Music now!!")
+                // Redirect to the music player page
+                window.location.href = "music-player.html";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+(ii) Follow page (follow.html) :-
+<!--All HTML,CSS and JavaScript code is there-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeatBlend - Social Media Handles</title>
+    <script src="https://kit.fontawesome.com/301f9e9bdb.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="Assets/Wynk Music_logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Assets/Wynk Music_logo.png" type="image/x-icon">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        body {
+            background-image: url(Assets/pngtree-art-music-background-image_2928765.jpg);
+            height: 100vh;
+            margin: 0px;
+            width: 100vw;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Adjust this if needed */
+        }
+
+        .box {
+            width: 45vw;
+            /* Adjust width as needed */
+            height: 60vh;
+            /* Adjust height as needed */
+            background-color: transparent;
+            text-align: center;
+            /* Optional, to center text horizontally */
+            /* padding: 20px; */
+            /* Optional, adjust padding as needed */
+            color: rgb(11, 236, 142);
+            border: 3px solid rgba(255, 255, 255, .5);
+            border-radius: 15px;
+            padding: 30px 40px;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            cursor: pointer;
+            /* Adjust this if needed */
+        }
+
+        .social h1{
+            z-index: 20;
+        }
+
+        .social i {
+            margin-right: 10px;
+            font-size: 30px;
+            color: white;
+            /* Adjust this if needed */
+        }
+
+        .social p {
+            margin: 0;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .social p:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>BeatBlend - Social Media Handles</h1>
+            <div class="social">
+                <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/_.iamankitttt._/" style="text-decoration: none;">
+                    <p>Instagram</p>
+                </a>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-facebook"></i>
+                <a href="https://www.facebook.com/profile.php?id=100088206488676&mibextid=2JQ9oc"
+                    style="text-decoration: none;">
+                    <p>Facebook</p>
+                </a>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-x-twitter"></i>
+                <a href="https://twitter.com/AnkitSa74725194" style="text-decoration: none;">
+                    <p>X-Twitter</p>
+                </a>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/ankit-kumar-sahoo-9015b9271/" style="text-decoration: none;">
+                    <p>LinkedIn</p>
+                </a>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-github"></i>
+                <a href="https://github.com/ShroudAnkit53" style="text-decoration: none;">
+                    <p>GitHub</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+(iii) Main Music Player (music-player.html) :-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatBlend - Your One Stop Destination for Favourite Songs</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="icon" href="Assets/Wynk Music_logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Assets/Wynk Music_logo.png" type="image/x-icon">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="Assets/Wynk Music_logo_1.png" alt=""></li>
+            <li>Home</li>
+            <li>About</li>
+            <a href="follow.html" style="text-decoration: none; color: white;"><li class="follow">Follow</li></a>
+            <li><img src="Assets/user-2.jpeg" alt="" class="user"></li>
+        </ul>
+    </nav>
+
+    <div class="container-1">
+        <!--First Folder-->
+        <div class="songList">
+            <h2>Bollywood Hits</h2>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="Assets(Music-1)/Mann Mera.jpeg" alt="1">
+                    <span class="songName">Mann Mera</span>
+                    <span class="songlistplay"><span class="timestamp">03:09 <i id="0" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/Door aa gaye.jpg" alt="2">
+                    <span class="songName">Door Aa Gaye</span>
+                    <span class="songlistplay"><span class="timestamp">03:56 <i id="1" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/Zara Sa.jpeg" alt="3">
+                    <span class="songName">Zara Sa</span>
+                    <span class="songlistplay"><span class="timestamp">05:03 <i id="2" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/Tere Liye.webp" alt="4">
+                    <span class="songName">Tere Liye</span>
+                    <span class="songlistplay"><span class="timestamp">04:39 <i id="3" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/Zinda Banda.jpeg" alt="5">
+                    <span class="songName">Zinda Banda</span>
+                    <span class="songlistplay"><span class="timestamp">04:24 <i id="4" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/Thumkeshwari.jpeg" alt="6">
+                    <span class="songName">Thumkeshwari</span>
+                    <span class="songlistplay"><span class="timestamp">02:43 <i id="5" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/Apna Bana Le.jpg" alt="7">
+                    <span class="songName">Apna Bana Le</span>
+                    <span class="songlistplay"><span class="timestamp">03:24 <i id="6" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/She Dont Know.jpg" alt="8">
+                    <span class="songName">She Don't Know</span>
+                    <span class="songlistplay"><span class="timestamp">03:23 <i id="7" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/Naya Pyaar Naya Ehsaas.jpg" alt="9">
+                    <span class="songName">Naya Pyaar Naya Ehsaas</span>
+                    <span class="songlistplay"><span class="timestamp">05:45 <i id="8" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="container-2">
+        <!--Second Folder-->
+        <div class="songList">
+            <h2>Best of Guru Randhawa</h2>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="Assets(Music-1)/Lahore.jpeg" alt="1">
+                    <span class="songName">Lahore</span>
+                    <span class="songlistplay"><span class="timestamp">03:17 <i id="9" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/High Rated Gabru.webp" alt="2">
+                    <span class="songName">High Rated Gabru</span>
+                    <span class="songlistplay"><span class="timestamp">02:59 <i id="10" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/Suit-Suit.jpg" alt="3">
+                    <span class="songName">Suit Suit</span>
+                    <span class="songlistplay"><span class="timestamp">03:10 <i id="11" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/ishare-tere.jpg" alt="4">
+                    <span class="songName">Ishare Tere</span>
+                    <span class="songlistplay"><span class="timestamp">03:09 <i id="12" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/Made-In-India.jpg" alt="5">
+                    <span class="songName">Made in India</span>
+                    <span class="songlistplay"><span class="timestamp">03:22 <i id="13" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/Baby Girl.jpg" alt="6">
+                    <span class="songName">Baby Girl</span>
+                    <span class="songlistplay"><span class="timestamp">03:27 <i id="14" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/nain-bengali.jpg" alt="7">
+                    <span class="songName">Nain Bengali</span>
+                    <span class="songlistplay"><span class="timestamp">03:34 <i id="15" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="Assets(Music-1)/Naach Meri Rani.jpeg" alt="8">
+                    <span class="songName">Naach Meri Rani</span>
+                    <span class="songlistplay"><span class="timestamp">03:32 <i id="16" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="container-3">
+        <!--Third Folder-->
+        <div class="songList">
+            <h2>Best of SANAM</h2>
+            <div class="songItemContainer">
+                <div class="songItem-3">
+                    <img src="Assets(Music-1)/Chala Jata Hoon.webp" alt="1">
+                    <span class="songName">Chala Jata Hoon</span>
+                    <span class="songlistplay"><span class="timestamp">03:30 <i id="17" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-3">
+                    <img src="Assets(Music-1)/Gulabi Aankhen.webp" alt="2">
+                    <span class="songName">Gulabi Aankhen</span>
+                    <span class="songlistplay"><span class="timestamp">03:44 <i id="18" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-3">
+                    <img src="Assets(Music-1)/Hai Apna Dil to Awara.webp" alt="3">
+                    <span class="songName">Hai Apna Dil to Awara</span>
+                    <span class="songlistplay"><span class="timestamp">03:20 <i id="19" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-3">
+                    <img src="Assets(Music-1)/Likhe Jo Khat Tujhe.webp" alt="4">
+                    <span class="songName">Likhe Jo Khat Tujhe</span>
+                    <span class="songlistplay"><span class="timestamp">03:23 <i id="20" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-3">
+                    <img src="Assets(Music-1)/Mere Mehboob Qayamat Hogi.webp" alt="5">
+                    <span class="songName">Mere Mehboob Qayamat Hogi</span>
+                    <span class="songlistplay"><span class="timestamp">04:01 <i id="21" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-3">
+                    <img src="Assets(Music-1)/Mere Sapnon Ki Rani.webp" alt="6">
+                    <span class="songName">Mere Sapnon Ki Rani</span>
+                    <span class="songlistplay"><span class="timestamp">03:54 <i id="22" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-3">
+                    <img src="Assets(Music-1)/O Mere Dil Ke Chain.webp" alt="7">
+                    <span class="songName">O Mere Dil Ke Chain</span>
+                    <span class="songlistplay"><span class="timestamp">03:22 <i id="23" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-3">
+                    <img src="Assets(Music-1)/Taarif Karoon.webp" alt="8">
+                    <span class="songName">Taarif Karoon</span>
+                    <span class="songlistplay"><span class="timestamp">02:37 <i id="24" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="container-4">
+        <!--Fourth Folder-->
+        <div class="songList">
+            <h2>KK Hits</h2>
+            <div class="songItemContainer">
+                <div class="songItem-4">
+                    <img src="Assets(Music-1)/Teri Yaadon Main.jpg" alt="1">
+                    <span class="songName">Teri Yaadon Main</span>
+                    <span class="songlistplay"><span class="timestamp">04:47 <i id="25" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-4">
+                    <img src="Assets(Music-1)/Labon Ko.jpg" alt="2">
+                    <span class="songName">Labon Ko</span>
+                    <span class="songlistplay"><span class="timestamp">05:43 <i id="26" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-4">
+                    <img src="Assets(Music-1)/Khuda Jane.jpg" alt="3">
+                    <span class="songName">Khuda Jane</span>
+                    <span class="songlistplay"><span class="timestamp">05:33 <i id="27" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-4">
+                    <img src="Assets(Music-1)/Mat Aazma Re.jpg" alt="4">
+                    <span class="songName">Mat Aazma Re</span>
+                    <span class="songlistplay"><span class="timestamp">04:08 <i id="28" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-4">
+                    <img src="Assets(Music-1)/Kya Mujhe Pyar Hai.jpg" alt="5">
+                    <span class="songName">Kya Mujhe Pyar Hai</span>
+                    <span class="songlistplay"><span class="timestamp">04:26 <i id="29" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-4">
+                    <img src="Assets(Music-1)/Haan Tu Hain.webp" alt="6">
+                    <span class="songName">Haan Tu Hain</span>
+                    <span class="songlistplay"><span class="timestamp">05:24 <i id="30" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-4">
+                    <img src="Assets(Music-1)/Make Some Noise For The Desi Boyz.jpg" alt="7">
+                    <span class="songName">Make Some Noise For The Desi Boyz</span>
+                    <span class="songlistplay"><span class="timestamp">04:04 <i id="31" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-4">
+                    <img src="Assets(Music-1)/Touch Me.jpg" alt="8">
+                    <span class="songName">Touch Me</span>
+                    <span class="songlistplay"><span class="timestamp">05:19 <i id="32" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem-4">
+                    <img src="Assets(Music-1)/Tu Hi Meri Shab Hai.jpg" alt="9">
+                    <span class="songName">Tu Hi Meri Shab Hai</span>
+                    <span class="songlistplay"><span class="timestamp">06:28 <i id="33" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+
+    <div class="bottom">
+        
+        <input type="range" name="range" id="myProgressbar" min="0" value="0" max="100">
+        
+        
+        <div class="icons">
+            <i class="fa-solid fa-2x fa-shuffle" id="shuffle"></i>
+            <i class="fa-solid fa-2x fa-backward-step" id="previous"></i>
+            <i class="fa-solid fa-2x fa-circle-play" id="masterPlay"></i>
+            <i class="fa-solid fa-2x fa-forward-step" id="next"></i>
+            <i class="fa-solid fa-2x fa-arrow-rotate-right" id="replay"></i>
+        </div>
+
+        <div class="songInfo">
+            <img src="Assets/playing.gif" width="40px" height="20px" alt="" id="gif"><span id="masterSongName"></span>
+        </div>
+
+        <div class="volume">
+            <i class="fa-solid fa-1.95x fa-volume-low" id="vol_icon"></i>
+            <input type="range" name="" id="vol" min="0" max="100" value="40">
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+    <script src="https://kit.fontawesome.com/301f9e9bdb.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+(iv) CSS Code for music player :-
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: bisque;
+}
+
+nav {
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  height: 70px;
+  background-color: black;
+  color: white;
+  font-size: 1 rem;
+  font-weight: 400;
+}
+
+nav ul li:hover{
+  text-decoration: underline;
+}
+
+nav ul li {
+  padding: 0 12px;
+}
+
+nav .user{
+  margin-left: 68vw;
+  border-radius: 34px;
+  width: 60px;
+}
+
+.brand img {
+  width: 60px;
+  border-radius: 50px;
+  padding: 0 8px;
+}
+
+.container-1 {
+  max-height: 80vh;
+  background-color: black;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  margin: 23px auto;
+  margin-bottom: 10px;
+  width: 83%;
+  padding: 30px;
+  background-image: url(Assets/bg.jpg);
+  background-size: cover;
+  overflow-y: scroll;
+}
+
+.container-2 {
+ max-height: 80vh;
+  background-color: black;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  margin: 23px auto;
+  width: 83%;
+  padding: 30px;
+  background-image: url(Assets/guru-randhawa.jpg);
+  background-size: cover;
+  overflow-y: scroll;
+}
+
+.container-3 {
+ max-height: 80vh;
+  background-color: black;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  margin: 23px auto;
+  width: 83%;
+  padding: 30px;
+  background-image: url(Assets/SANAM.jpg);
+  background-size: cover;
+  overflow-y: scroll;
+}
+
+.container-4 {
+ max-height: 80vh;
+  background-color: black;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  margin: 23px auto;
+  width: 83%;
+  padding: 30px;
+  background-image: url(Assets/KK.jpeg);
+  background-size: 40vw;
+  overflow-y: scroll;
+}
+
+.bottom {
+  position: sticky;
+  height: 100px;
+  background-color: black;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column-reverse;
+}
+
+.icons {
+  margin: 20px;
+}
+
+.fa-solid {
+  padding: 5px;
+}
+
+.icons i {
+  cursor: pointer;
+}
+
+#myProgressbar {
+  width: 400px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 23px;
+}
+
+.songItemContainer {
+  margin-top: 45px;
+}
+
+.songItem {
+  height: 53px;
+  width: 83px;
+  display: flex;
+  background-color: white;
+  color: black;
+  width: 130%;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
+  
+}
+
+.songItem-3{
+  height: 53px;
+  width: 83px;
+  display: flex;
+  background-color: white;
+  color: black;
+  width: 107%;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
+  
+}
+
+.songItem-4{
+  height: 53px;
+  width: 83px;
+  display: flex;
+  background-color: white;
+  color: black;
+  width: 105%;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
+}
+
+.songItem img {
+  width: 50px;
+  margin: 0 23px;
+  border-radius: 34px;
+}
+
+.songItem-3 img{
+  width: 50px;
+  margin: 0 23px;
+  border-radius: 34px;
+}
+
+.songItem-4 img{
+  width: 50px;
+  margin: 0 23px;
+  border-radius: 34px;
+}
+
+.songItem-5 img{
+  width: 50px;
+  margin: 0 23px;
+  border-radius: 34px;
+}
+
+.timestamp {
+  margin: 0 23px;
+}
+
+.timestamp i {
+  cursor: pointer;
+}
+
+.songInfo {
+  position: absolute;
+  left: 5vw;
+  font-family: "Varela Round", sans-serif;
+}
+
+.songInfo img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+  margin-right: 10px;
+}
+
+.bottom .volume input{
+  position: absolute;
+  right: 30px;  
+  bottom: 50px;
+}
+
+.bottom .volume i{
+  position: absolute;
+  right: 165px;
+  bottom: 45px;
+}
+
+/* Width */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333; /* Dark background color for the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #666; /* Darker color for the scrollbar handle */
+  border-radius: 5px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #999; /* Lighter color for the scrollbar handle on hover */
+}
+
+(v) JS Code for music player :-
+console.log("Welcome to Music Player - Your One Stop Destination for Music");
+
+// Initialize The Variables
+let songIndex = 0;
+let audioElement = new Audio("Assets(Music-1)/Mann-Mera.mp3");
+let masterPlay = document.getElementById("masterPlay");
+let myProgressbar = document.getElementById("myProgressbar");
+let gif = document.getElementById("gif");
+let masterSongName = document.getElementById("masterSongName");
+let songItems = document.getElementsByClassName("songItem");
+let volumeRange = document.getElementById("volume-range");
+let volumeIcon = document.getElementById("volume-icon");
+
+let songs = [
+  {
+    songName: "Mann Mera",
+    filePath: "Assets(Music-1)/Mann-Mera.mp3",
+    coverPath: "Assets(Music-1)/Mann Mera.jpeg",
+  },
+  {
+    songName: "Door Aa Gaye",
+    filePath: "Assets(Music-1)/Door-Aa-Gaye.mp3",
+    coverPath: "Assets(Music-1)/Door Aa Gaye.jpg",
+  },
+  {
+    songName: "Zara Sa",
+    filePath: "Assets(Music-1)/Zara-Sa.mp3",
+    coverPath: "Assets(Music-1)/Zara Sa.jpeg",
+  },
+  {
+    songName: "Tere Liye",
+    filePath: "Assets(Music-1)/Tere-Liye.mp3",
+    coverPath: "Assets(Music-1)/Tere Liye.webp",
+  },
+  {
+    songName: "Zinda Banda",
+    filePath: "Assets(Music-1)/Zinda-Banda.mp3",
+    coverPath: "Assets(Music-1)/Zinda Banda.jpeg",
+  },
+  {
+    songName: "Thumkeshwari",
+    filePath: "Assets(Music-1)/Thumkeshwari.mp3",
+    coverPath: "Assets(Music-1)/Thumkeshwari.jpeg",
+  },
+  {
+    songName: "Apna Bana Le",
+    filePath: "Assets(Music-1)/Apna-Bana-Le.mp3",
+    coverPath: "Assets(Music-1)/Apna Bana Le.jpg",
+  },
+  {
+    songName: "She Don't Know",
+    filePath: "Assets(Music-1)/She-Don't-Know.mp3",
+    coverPath: "Assets(Music-1)/She Don't Know.jpg",
+  },
+  {
+    songName: "Naya Pyaar Naya Ehsaas",
+    filePath: "Assets(Music-1)/Naya-Pyaar-Naya-Ehsaas.mp3",
+    coverPath: "Assets(Music-1)/Naya Pyaar Naya Ehsaas.jpg",
+  },
+  {
+    songName: "Lahore",
+    filePath: "Assets(Music-1)/Lahore.mp3",
+    coverPath: "Assets(Music-1)/Lahore.jpeg",
+  },
+  {
+    songName: "High Rated Gabru",
+    filePath: "Assets(Music-1)/High-Rated-Gabru.mp3",
+    coverPath: "Assets(Music-1)/High Rated Gabru.webp",
+  },
+  {
+    songName: "Suit Suit",
+    filePath: "Assets(Music-1)/Suit-Suit.mp3",
+    coverPath: "Assets(Music-1)/Suit Suit.jpg",
+  },
+  {
+    songName: "Ishare Tere",
+    filePath: "Assets(Music-1)/Ishare-Tere.mp3",
+    coverPath: "Assets(Music-1)/ishare-tere.jpg",
+  },
+  {
+    songName: "Made In India",
+    filePath: "Assets(Music-1)/Made-In-India.mp3",
+    coverPath: "Assets(Music-1)/Made-In-India.jpg",
+  },
+  {
+    songName: "Baby Girl",
+    filePath: "Assets(Music-1)/Baby-Girl.mp3",
+    coverPath: "Assets(Music-1)/Baby Girl.jpg",
+  },
+  {
+    songName: "Nain Bengali",
+    filePath: "Assets(Music-1)/Nain-Bengali.mp3",
+    coverPath: "Assets(Music-1)/nain-bengali.jpg",
+  },
+  {
+    songName: "Naach Meri Rani",
+    filePath: "Assets(Music-1)/Naach-Meri-Rani.mp3",
+    coverPath: "Assets(Music-1)/Naach Meri Rani.webp",
+  },
+  {
+    songName: "Chala Jata Hoon",
+    filePath: "Assets(Music-1)/Chala-Jata-Hoon.mp3",
+    coverPath: "Assets(Music-1)/Chala Jata Hoon.webp",
+  },
+  {
+    songName: "Gulabi Aankhen",
+    filePath: "Assets(Music-1)/Gulabi-Aankhen.mp3",
+    coverPath: "Assets(Music-1)/Gulabi Aankhen.webp",
+  },
+  {
+    songName: "Hai Apna Dil to Awara",
+    filePath: "Assets(Music-1)/Hai-Apna-Dil-to-Awara.mp3",
+    coverPath: "Assets(Music-1)/Hai Apna Dil to Awara.webp",
+  },
+  {
+    songName: "Likhe Jo Khat Tujhe",
+    filePath: "Assets(Music-1)/Likhe-Jo-Khat-Tujhe.mp3",
+    coverPath: "Assets(Music-1)/Likhe Jo Khat Tujhe.webp",
+  },
+  {
+    songName: "Mere Mehboob Qayamat Hogi",
+    filePath: "Assets(Music-1)/Mere-Mehboob-Qayamat-Hogi.mp3",
+    coverPath: "Assets(Music-1)/Mere Mehboob Qayamat Hogi.webp",
+  },
+  {
+    songName: "Mere Sapnon Ki Rani",
+    filePath: "Assets(Music-1)/Mere-Sapnon-Ki-Rani.mp3",
+    coverPath: "Assets(Music-1)/Mere Sapnon Ki Rani.webp",
+  },
+  {
+    songName: "O Mere Dil Ke Chain",
+    filePath: "Assets(Music-1)/O-Mere-Dil-Ke-Chain.mp3",
+    coverPath: "Assets(Music-1)/O Mere Dil Ke Chain.webp",
+  },
+  {
+    songName: "Taarif Karoon",
+    filePath: "Assets(Music-1)/Taarif-Karoon.mp3",
+    coverPath: "Assets(Music-1)/Taarif Karoon.webp",
+  },
+  {
+    songName: "Teri Yaadon Mein",
+    filePath: "Assets(Music-1)/Teri-Yaadon-Mein.mp3",
+    coverPath: "Assets(Music-1)/Teri Yaadon Mein.jpg",
+  },
+  {
+    songName: "Labon Ko",
+    filePath: "Assets(Music-1)/Labon-Ko.mp3",
+    coverPath: "Assets(Music-1)/Labon Ko.jpg",
+  },
+  {
+    songName: " Khuda Jaane",
+    filePath: "Assets(Music-1)/Khuda-Jaane.mp3",
+    coverPath: "Assets(Music-1)/Khuda Jaane.jpg",
+  },
+  {
+    songName: "Mat Aazma Re",
+    filePath: "Assets(Music-1)/Mat-Aazma-Re.mp3",
+    coverPath: "Assets(Music-1)/Mat Aazma Re.jpg",
+  },
+  {
+    songName: "Kya Mujhe Pyaar Hai",
+    filePath: "Assets(Music-1)/Kya-Mujhe-Pyaar-Hai.mp3",
+    coverPath: "Assets(Music-1)/Kya Mujhe Pyaar Hai.jpg",
+  },
+  {
+    songName: "Haan Tu Hain",
+    filePath: "Assets(Music-1)/Haan-Tu-Hain.mp3",
+    coverPath: "Assets(Music-1)/Haan Tu Hain.webp",
+  },
+  {
+    songName: "Make Your Some Noise For The Desi Boyz",
+    filePath: "Assets(Music-1)/Make-Your-Some-Noise-For-The-Desi-Boyz.mp3",
+    coverPath: "Assets(Music-1)/Make Your Some Noise For The Desi Boyz.jpg",
+  },
+  {
+    songName: "Touch Me",
+    filePath: "Assets(Music-1)/Touch-Me.mp3",
+    coverPath: "Assets(Music-1)/Touch Me.jpg",
+  },
+  {
+    songName : "Tu Hi Meri Shab Hai",
+    filePath : "Assets(Music-1)/Tu-Hi-Meri-Shab-Hai.mp3",
+    coverPath : "Assets(Music-1)/Tu Hi Meri Shab Hai.jpg",
+  }
+];
+
+//audioElement.play();
+
+//Hnadle play/pause
+masterPlay.addEventListener("click", () => {
+  if (audioElement.paused || audioElement.currentTime <= 0) {
+    audioElement.play();
+    masterPlay.classList.remove("fa-circle-play");
+    masterPlay.classList.add("fa-circle-pause");
+    gif.style.opacity = 1;
+  } else {
+    audioElement.pause();
+    masterPlay.classList.remove("fa-circle-pause");
+    masterPlay.classList.add("fa-circle-play");
+    gif.style.opacity = 0;
+  }
+});
+
+// Listen to event
+audioElement.addEventListener("timeupdate", () => {
+  //Update Seek Bar
+  progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
+  myProgressbar.value = progress;
+});
+
+myProgressbar.addEventListener("change", () => {
+  audioElement.currentTime =
+    (myProgressbar.value * audioElement.duration) / 100;
+});
+
+const makeAllPlays = () => {
+  Array.from(document.getElementsByClassName("songItemPlay")).forEach(
+    (element) => {
+      element.classList.remove("fa-circle-pause");
+      element.classList.add("fa-circle-play");
+    }
+  );
+};
+
+Array.from(document.getElementsByClassName("songItemPlay")).forEach(
+  (element) => {
+    element.addEventListener("click", (e) => {
+      makeAllPlays();
+      songIndex = parseInt(e.target.id);
+      e.target.classList.remove("fa-circle-play");
+      e.target.classList.add("fa-circle-pause");
+      audioElement.src = `Assets(Music-1)/${songIndex}.mp3`;
+      masterSongName.innerText = songs[songIndex].songName;
+      audioElement.currentTime = 0;
+      audioElement.play();
+      gif.style.opacity = 1;
+      masterPlay.classList.remove("fa-circle-play");
+      masterPlay.classList.add("fa-circle-pause");
+    });
+  }
+);
+
+
+document.getElementById('next').addEventListener('click',()=>{
+    if(songIndex >= 33){
+        songIndex = 0;
+    }
+    else{
+        songIndex += 1;
+    }
+    audioElement.src = `Assets(Music-1)/${songIndex}.mp3`;
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove("fa-circle-play");
+    masterPlay.classList.add("fa-circle-pause");
+});
+
+document.getElementById('previous').addEventListener('click',()=>{
+    if(songIndex <= 0){
+        songIndex = 0;
+    }
+    else{
+        songIndex -= 1;
+    }
+    audioElement.src = `Assets(Music-1)/${songIndex}.mp3`;
+    masterSongName.innerText = songs[songIndex].songName;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove("fa-circle-play");
+    masterPlay.classList.add("fa-circle-pause");
+});
+
+// Update the volume
+let vol_icon = document.getElementById("vol_icon");
+let vol = document.getElementById("vol");
+
+vol.addEventListener('change',()=>{  //fa-volume-high fa-volume-xmark
+    if(vol.value == 0){
+      vol_icon.classList.remove('fa-volume-low');
+      vol_icon.classList.add('fa-volume-xmark');
+      vol_icon.classList.remove('fa-volume-high');
+    }
+    else if(vol.value >0 && vol_icon.value <=60){
+      vol_icon.classList.add('fa-volume-low');
+      vol_icon.classList.remove('fa-volume-xmark');
+      vol_icon.classList.remove('fa-volume-high');
+    }
+    else{
+      vol_icon.classList.remove('fa-volume-low');
+      vol_icon.classList.remove('fa-volume-xmark');
+      vol_icon.classList.add('fa-volume-high');
+    }
+
+    let vol_a = vol.value;
+    music.volume = vol_a/100;
+})
