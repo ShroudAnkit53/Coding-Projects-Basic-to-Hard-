@@ -1,0 +1,471 @@
+For all required images :- https://drive.google.com/drive/folders/1HiU42Jsn0Q1uuLrRPZY4ltFtI_tKBt59
+
+(i) Follow Page (follow.html) :-
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media Handles</title>
+    <script src="https://kit.fontawesome.com/301f9e9bdb.js" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        body {
+            background-image: url(bg1.jpg);
+            background-size: 70vw;
+            height: 100vh;
+            margin: 0px;
+            width: 100vw;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Adjust this if needed */
+        }
+
+        .box {
+            width: 45vw;
+            /* Adjust width as needed */
+            height: 60vh;
+            /* Adjust height as needed */
+            background-color: transparent;
+            text-align: center;
+            /* Optional, to center text horizontally */
+            /* padding: 20px; */
+            /* Optional, adjust padding as needed */
+            color: rgb(20, 20, 20);
+            border: 3px solid rgba(255, 255, 255, .5);
+            border-radius: 15px;
+            padding: 30px 40px;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            cursor: pointer;
+            /* Adjust this if needed */
+        }
+
+        .social h1{
+            z-index: 20;
+        }
+
+        .social i {
+            margin-right: 10px;
+            font-size: 30px;
+            color: white;
+            /* Adjust this if needed */
+        }
+
+        .social p {
+            margin: 0;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .social p:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Social Media Handles</h1>
+            <div class="social">
+                <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/_.iamankitttt._/" style="text-decoration: none;">
+                    <p>Instagram</p>
+                </a>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-facebook"></i>
+                <a href="https://www.facebook.com/profile.php?id=100088206488676&mibextid=2JQ9oc"
+                    style="text-decoration: none;">
+                    <p>Facebook</p>
+                </a>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-x-twitter"></i>
+                <a href="https://twitter.com/AnkitSa74725194" style="text-decoration: none;">
+                    <p>X-Twitter</p>
+                </a>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/ankit-kumar-sahoo-9015b9271/" style="text-decoration: none;">
+                    <p>LinkedIn</p>
+                </a>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-github"></i>
+                <a href="https://github.com/ShroudAnkit53" style="text-decoration: none;">
+                    <p>GitHub</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+(ii) index.html :-
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Ankit's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                    <li><a href="follow.html">Follow</a></li>
+                    <li><img src="user-2.jpeg" alt="" style="width: 55px; border-radius: 34px;"></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hii, My Name is <span class="gold">Ankit</span> & I am
+                <div>a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn"><a href="https://github.com/ShroudAnkit53" style="text-decoration: none; color: white;">Visit GitHub</a></button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        
+        <hr>
+
+        <section class="secondSection">
+            <span class="text-gray">What I have done so Far</span>
+            <h1>Important Project Experience</h1>
+
+            <div class="box1">
+                <div class="vertical">
+                    <img src="netfilx_clone.png" alt="" class="image-top">
+                    <div class="vertical-title">Netfilx Clone</div>
+                    <div class="vertical-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, inventore? Voluptatibus illum quasi incidunt adipisci. Numquam expedita, aut ad mollitia molestiae facilis neque unde perferendis aperiam nostrum temporibus quo qui, voluptatum tempore cupiditate esse?
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="amazon_clone.png" alt="" class="image-top">
+                    <div class="vertical-title">Amazon Clone</div>
+                    <div class="vertical-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, inventore? Voluptatibus illum quasi incidunt adipisci. Numquam expedita, aut ad mollitia molestiae facilis neque unde perferendis aperiam nostrum temporibus quo qui, voluptatum tempore cupiditate esse?
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="music_player.png" alt="" class="image-top">
+                    <div class="vertical-title">Music Player</div>
+                    <div class="vertical-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, inventore? Voluptatibus illum quasi incidunt adipisci. Numquam expedita, aut ad mollitia molestiae facilis neque unde perferendis aperiam nostrum temporibus quo qui, voluptatum tempore cupiditate esse?
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="portfolio.png" alt="" class="image-top">
+                    <div class="vertical-title">Portfolio Website</div>
+                    <div class="vertical-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, inventore? Voluptatibus illum quasi incidunt adipisci. Numquam expedita, aut ad mollitia molestiae facilis neque unde perferendis aperiam nostrum temporibus quo qui, voluptatum tempore cupiditate esse?
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="weather.png" alt="" class="image-top">
+                    <div class="vertical-title">Weather Website</div>
+                    <div class="vertical-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, inventore? Voluptatibus illum quasi incidunt adipisci. Numquam expedita, aut ad mollitia molestiae facilis neque unde perferendis aperiam nostrum temporibus quo qui, voluptatum tempore cupiditate esse?
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Ankit's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                    <li><a href="follow.html">Follow</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-rights">
+            Copyright &#169; www.ankitportfolio.com | All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Python Developer'],
+      typeSpeed: 50,
+      // Add a delay of 750 milliseconds between each character
+      backDelay: 750,
+    });
+  </script>
+</body>
+
+</html>
+
+(iii) style.css :-
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(0, 0, 37);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(24, 24, 75);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: rgb(130, 87, 155);
+}
+
+main hr {
+    border: 0;
+    background-color: rgb(130, 87, 155);
+    height: 1.2px;
+    margin: 50px 84px;
+}
+
+.left {
+    font-size: 1.3rem;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.firstSection>div {
+    width: 30%;
+}
+
+.leftSection {
+    font-size: 2.5rem;
+}
+
+.leftSection .buttons{
+    padding: 40px 0;
+}
+
+.leftSection .btn{
+    padding: 12px 10px;
+    background-color: #1e2167;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.rightSection img {
+    width: 75%;
+}
+
+.gold {
+    color: goldenrod;
+}
+
+.text-gray{
+    color: gray;
+}
+
+#element {
+    color: rgb(130, 87, 155);
+}
+
+.secondSection {
+    max-width: 80vw;
+    margin: auto;
+    height: 80vh;
+}
+
+.secondSection h1 {
+    font-size: 1.5rem;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.secondSection .box1{
+    background: white;
+    width: 80vw;
+    height: 2px;
+    margin: 50px 0;
+    display: flex;
+}
+
+.secondSection .vertical{
+    height: 83px;
+    width: 1px;
+    background-color: white;
+    margin: 0 100px;
+}
+
+.image-top{
+    width: 50px;
+    position: relative;
+    top: -32px;
+    left: -25px;
+}
+
+.vertical-title{
+    position: relative;
+    top: 75px;
+    width: 150px;
+    font-size: 15px;
+    right: 35px;
+}
+
+.vertical-content{
+    position: relative;
+    top: 86px;
+    color: gray;
+    width: 150px;
+    font-size: 10px;
+    right: 45px;
+}
+
+footer{
+    background-color: #0e0e1a;
+}
+
+.footer{
+    display: flex;
+    padding: 23px 122px;
+    justify-content: space-evenly;
+}
+
+.footer .footer-first h3{
+    font-size: 1.5rem;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.footer-second ul li a:hover{
+    text-decoration: underline;
+}
+
+.footer ul li a{
+    display: inline-block;
+    margin: 0 23px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer > div{
+    width: 300px;
+}
+
+footer .footer-rights{
+    text-align: center;
+    color: gray;
+    padding: 12px 0;
+}
+
+/* Width */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #333;
+    /* Dark background color for the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #666;
+    /* Darker color for the scrollbar handle */
+    border-radius: 5px;
+    /* Rounded corners for the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+    /* Lighter color for the scrollbar handle on hover */
+}
