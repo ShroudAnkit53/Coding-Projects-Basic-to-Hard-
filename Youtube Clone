@@ -1,0 +1,1393 @@
+index.html :-
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="images/youtube-logo-1.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="flex-div">
+        <div class="nav-left">
+            <img class="invert" onclick="myfunction()" class="menu-icon" src="images/menu-01-stroke-rounded.svg" alt="">
+            <img class="invert" src="images/logo.svg" alt="" style="width: 90px;">
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input type="text" placeholder="Search">
+                <img src="images/search.png" alt="">
+            </div>
+            <img src="images/voice-search.png" alt="" class="mic-icon">
+        </div>
+        <div class="nav-right flex-div">
+            <img src="images/upload.png" alt="" style="width: 24px;">
+            <img src="images/notification.png" alt="" style="width: 24px;">
+            <img src="images/user-2.jpeg" alt="" class="user" style="width: 39px;border-radius: 34px;">
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="shortcut">
+            <a href="#"><img class="invert" src="images/home.png">
+                <p>Home</p>
+            </a>
+            <a href="#"><img class="invert" src="images/shorts.svg">
+                <p>Shorts</p>
+            </a>
+            <a href="#"><img class="invert" src="images/subscriprion.png">
+                <p>Subscriptions</p>
+            </a>
+        </div>
+        <div class="line"></div>
+        <div class="shortcut">
+            <h2><a href="" class="you">
+                    <p style="font-size: 15px;"><b>You</b> ></p>
+                </a></h2>
+            <a href="#"><img class="invert" src="images/history.png">
+                <p>History</p>
+            </a>
+            <a href="#"><img class="invert" src="images/playlist.png">
+                <p>Playlists</p>
+            </a>
+            <a href="#"><img class="invert" src="images/watch.png">
+                <p>Watch Later</p>
+            </a>
+            <a href="#"><img class="invert" src="images/like video.png">
+                <p>Liked Videos</p>
+            </a>
+        </div>
+        <div class="line"></div>
+        <div class="shortcut subscribe-list">
+            <h2>
+                <p style="font-size: 15px;margin-top: 12px;"><b>Subscriptions</b></p>
+            </h2>
+            <a href="#"><img src="images/chelsea2.png" alt="">
+                <p>Chelsea Football Club</p>
+            </a>
+            <a href="#"><img src="images/abhishek.jpeg" alt="">
+                <p>Fukra Insaan</p>
+            </a>
+            <a href="#"><img src="images/anubhav.jpeg" alt="">
+                <p>Anubhav Singh Bassi</p>
+            </a>
+            <a href="#"><img src="images/tanay.jpeg" alt="">
+                <p>Tanay</p>
+            </a>
+            <a href="#"><img src="images/harry.jpeg" alt="">
+                <p>Code With Harry</p>
+            </a>
+            <a href="#"><img src="images/ashish.jpeg" alt="">
+                <p>Ashish Chanchlani Vines</p>
+            </a>
+            <a href="#"><img src="images/harsh.jpeg" alt="">
+                <p>Harsh Gujral</p>
+            </a>
+            <a href="#"><img src="images/nischay.jpeg" alt="">
+                <p>Nischay Malhan</p>
+            </a>
+        </div>
+        <div class="line"></div>
+        <div class="shortcut explore">
+            <h2>
+                <p style="font-size: 15px;margin-top: 12px;"><b>Explore</b></p>
+            </h2>
+            <a href="#"><img class="invert" src="images/trending.png" alt="">
+                <p>Trending</p>
+            </a>
+            <a href="#"><img class="invert" src="images/shopping.png" alt="">
+                <p>Shopping</p>
+            </a>
+            <a href="#"><img class="invert" src="images/music.png" alt="">
+                <p>Music</p>
+            </a>
+            <a href="#"><img class="invert" src="images/film.png" alt="">
+                <p>Films</p>
+            </a>
+            <a href="#"><img class="invert" src="images/gaming.png" alt="">
+                <p>Gaming</p>
+            </a>
+            <a href="#"><img class="invert" src="images/sport.png" alt="">
+                <p>Sport</p>
+            </a>
+            <a href="#"><img class="invert" src="images/live.png" alt="">
+                <p>Live</p>
+            </a>
+        </div>
+        <div class="line"></div>
+        <div class="shortcut extra">
+            <a href="#"><img class="invert" src="images/settings.png" alt="">
+                <p>Settings</p>
+            </a>
+            <a href="#"><img class="invert" src="images/report.png" alt="">
+                <p>Report History</p>
+            </a>
+            <a href="#"><img class="invert" src="images/help.png" alt="">
+                <p>Help</p>
+            </a>
+            <a href="#"><img class="invert" src="images/feedback.png" alt="">
+                <p>Send Feedback</p>
+            </a>
+        </div>
+        <div class="line"></div>
+        <div class="shortcut">
+            <p style="margin-top: 5px;color: rgb(69, 66, 66);font-size: 11px;margin-bottom: 7px;margin-top: 10px;">©
+                2024 Google LLC</p>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div class="container">
+        <div class="banner">
+            <img src="images/banner.png" alt="">
+        </div>
+        <div class="list-container">
+            <div class="vid-list">
+                <a href="video1.html"><img src="images/thumbnail1.png" alt="" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/nature.jpeg" alt="">
+                    <div class="vid-info">
+                        <a href="video1.html">Natural Beauty at its Best Part-I</a>
+                        <p class="invert">Relaxation Film</p>
+                        <p class="invert">28K Views &bull; 6 days ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="video3.html"><img src="images/thumbnail6.png" alt="" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/car2.jpeg" alt="">
+                    <div class="vid-info">
+                        <a href="video3.html">Modern Cars</a>
+                        <p class="invert">World of Cars</p>
+                        <p class="invert">50K Views &bull; 2 weeks ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="video2.html"><img src="images/thumbnail4.png" alt="" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/nature.jpeg" alt="">
+                    <div class="vid-info">
+                        <a href="video2.html">Natural Beauty at its Best Part-II</a>
+                        <p class="invert">Relaxation Film</p>
+                        <p class="invert">20K Views &bull; 1 days ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="https://www.youtube.com/watch?v=gh3FyLT7WVg"><img src="images/thumbnail8.webp" alt="" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/aditya.jpeg" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=gh3FyLT7WVg">Kurchi Madathapetti Full Video Song | Guntur Kaaram |Mahesh Babu |Sreeleela |Trivikram |Thaman S</a>
+                        <p class="invert">Aditya Music</p>
+                        <p class="invert">176M Views &bull; 2 months ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="https://www.youtube.com/watch?v=5yPO5lFeAIE"><img src="images/Mawaa.webp" alt="" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/aditya.jpeg" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=5yPO5lFeAIE">Mawaa Enthaina Full Video Song |Guntur Kaaram |Mahesh Babu |Meenakshi Chaudhary |Trivikram |Thaman S</a>
+                        <p class="invert">Aditya Music</p>
+                        <p class="invert">5.5M Views &bull; 2 months ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="https://www.youtube.com/watch?v=LxLf3G00DyM"><img src="images/thumbnail9.webp" alt="" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/ashish.jpeg" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=LxLf3G00DyM">Holi Returns | Ashish Chanchlani</a>
+                        <p class="invert">Ashish Chanchlani Vines</p>
+                        <p class="invert">41M Views &bull; 1 year ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="https://www.youtube.com/watch?v=fUmSkEvet08&t=285s"><img src="images/thumbnail2.webp" alt="" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/harry.jpeg" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=fUmSkEvet08&t=285s">Profitable Web Development Road Map Step by Step-Code With Harry</a>
+                        <p class="invert">Code With Harry</p>
+                        <p class="invert">188K Views &bull; 3 days ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="https://www.youtube.com/watch?v=IEfBBYmxtIo&t=79s"><img src="images/thumbnail3.webp" alt="" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/anubhav.jpeg" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=IEfBBYmxtIo&t=79s">UPSC - Stand Up Comedy ft.Anubhav Singh Bassi</a>
+                        <p class="invert">Anubhav Singh Bassi</p>
+                        <p class="invert">51M Views &bull; 8 months ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="https://www.youtube.com/watch?v=OGjHGDEixAQ"><img src="images/thumbnail5.webp" alt="" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/harsh.jpeg" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=OGjHGDEixAQ">Wedding Ka Season - Stand Up Comedy by Harsh Gujral</a>
+                        <p class="invert">Harsh Gujral</p>
+                        <p class="invert">8.5M Views &bull; 3 months ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="https://www.youtube.com/watch?v=m3OtL4peEWU"><img src="images/thumbnail7.webp" alt="" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/tseries.jpeg" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=m3OtL4peEWU">Jawan: Not Ramaiya Vastavaiya Extended Version</a>
+                        <p class="invert">T-Series</p>
+                        <p class="invert">72M Views &bull; 6 months ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="https://www.youtube.com/watch?v=GOkJguI8kYc"><img src="images/thumbnail10.webp" alt="" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/tseries.jpeg" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=GOkJguI8kYc">Full Video: Illegal Weapon 2.0 | Street Dancer 3D</a>
+                        <p class="invert">T-Series</p>
+                        <p class="invert">593M Views &bull; 4 years ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vid-list">
+                <a href="https://www.youtube.com/watch?v=0-xnFm_TPQ0"><img src="images/thumbnail11.webp" alt="" class="thumbnail"></a>
+                <div class="flex-div">
+                    <img src="images/tanay.jpeg" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=0-xnFm_TPQ0">DHONI GAMBHIR HANDSHAKE 😱😱 | RUSSELL CLOSING HIS EARS | CSK VS KKR 2024</a>
+                        <p class="invert">Tanay</p>
+                        <p class="invert">343K Views &bull; 10 hours ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main script -->
+    <script>
+        var menuIcon = document.querySelector('.menu-icon');
+        var sideBar = document.querySelector('.sidebar');
+        var container = document.querySelector('.container');
+
+        function myfunction(){
+            sideBar.classList.toggle('small-sidebar');
+            container.classList.toggle('large-container');
+        }
+    </script>
+</body>
+
+</html>
+
+video1.html:-
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Beauty at its Best Part-I</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="images/youtube-logo-1.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="flex-div">
+        <div class="nav-left">
+            <img class="invert" onclick="myfunction()" class="menu-icon" src="images/menu-01-stroke-rounded.svg" alt="">
+            <img class="invert" src="images/logo.svg" alt="" style="width: 90px;">
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input type="text" placeholder="Search">
+                <img src="images/search.png" alt="">
+            </div>
+            <img src="images/voice-search.png" alt="" class="mic-icon">
+        </div>
+        <div class="nav-right flex-div">
+            <img src="images/upload.png" alt="" style="width: 24px;">
+            <img src="images/notification.png" alt="" style="width: 24px;">
+            <img src="images/user-2.jpeg" alt="" class="user" style="width: 39px;border-radius: 34px;">
+        </div>
+    </nav>
+
+    <!-- Video Container -->
+    <div class="container play-container">
+        <div class="row">
+            <div class="play-video">
+                <video controls autoplay>
+                    <source src="videos/nature_video_1.mp4" type="video/mp4">
+                </video>
+                <h3>Natural Beauty at its Best Part-I</h3>
+                <div class="tags">
+                    <a href="">#Nature</a> <a href="">#New</a> <a href="">#Nature'sGoodness</a>
+                </div>
+                <div class="play-video-info">
+                    <p class="invert">28K Views &bull; 6 days ago</p>
+                    <div>
+                        <button><a href=""><img src="images/like.png" alt=""><p>1925</p></a></button>
+                        <button><a href=""><img src="images/dislike.png" alt=""><p>10</p></a></button>
+                        <button><a href=""><img src="images/share.png" alt=""><p>Share</p></a></button>
+                        <button><a href=""><img class="invert" src="images/download-img.png" alt=""><p>Download</p></a></button>
+                    </div>
+                </div>
+                <hr>
+                <div class="publisher">
+                    <img src="images/nature.jpeg" alt="">
+                    <div>
+                        <p class="invert">Relaxation Film</p>
+                        <span class="invert">54K Subscribers</span>
+                    </div>
+                    <button type="button" class="join" style="background: #242222;
+                    color: white;outline: 0;border: 0;border-radius: 26px;" onmouseover="this.style.background='#333';" onmouseout="this.style.background='#242222';">Join</button>
+                    <button type="button" class="subscribe" style="background: white;
+                    color: black;outline: 0;border: 0;margin-left: 10px;border-radius: 26px;" onmouseover="this.style.background='rgb(232, 227, 227)';" onmouseout="this.style.background='white';">Subscribe</button>
+                </div>
+                <div class="vid-description">
+                    <p>Nature's beauty....</p>
+                    <p>Drone shot at beautiful Beach.Hope You Enjoy and liked it.If you liked it then make sure you subscribe my channel.</p>
+                    <p>Below given links are my social media handles:- </p>
+                </div>
+                <hr style="color: white;line-height: 18px;">
+                <h4>56 Comments</h4>
+                <div class="add-comments">
+                    <img src="images/user-2.jpeg" alt="">
+                    <input type="text" placeholder="Add Comment...">
+                </div>
+                <div class="old-comments">
+                    <img src="images/user-a.jpeg" alt="">
+                    <div>
+                        <h3>@ALBDev <span>2 days ago</span></h3>
+                        <p>Nice view brother...</p>
+                        <div class="acomment-action">
+                            <img src="images/like.png" alt="">
+                            <span>244</span>
+                            <img src="images/dislike.png" alt="">
+                            <span>12</span>
+                            <span>Reply</span>
+                            <a href="">All Replies</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="old-comments">
+                    <img src="images/user-b.jpeg" alt="">
+                    <div>
+                        <h3>DevOPS <span>2 weeks ago</span></h3>
+                        <p>Nice view brother...</p>
+                        <div class="acomment-action">
+                            <img src="images/like.png" alt="">
+                            <span>244</span>
+                            <img src="images/dislike.png" alt="">
+                            <span>12</span>
+                            <span>Reply</span>
+                            <a href="">All Replies</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="old-comments">
+                    <img src="images/user-c.jpeg" alt="">
+                    <div>
+                        <h3>Mr.Bean <span>9 days ago</span></h3>
+                        <p>Nice view brother...</p>
+                        <div class="acomment-action">
+                            <img src="images/like.png" alt="">
+                            <span>244</span>
+                            <img src="images/dislike.png" alt="">
+                            <span>12</span>
+                            <span>Reply</span>
+                            <a href="">All Replies</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-sidebar">
+                <div class="side-video-list">
+                    <img src="images/thumbnail6.png" alt="">
+                    <div class="vid-info">
+                        <a href="" class="small-thumbnail">Modern Cars</a>
+                        <p class="invert">World of Cars</p>
+                        <p class="invert">50K Views &bull; 2 weeks ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/thumbnail8.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=gh3FyLT7WVg">Kurchi Madathapetti Full Video Song | Guntur Kaaram |</a>
+                        <p class="invert">Aditya Music</p>
+                        <p class="invert">176M Views &bull; 2 months ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/Mawaa.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=5yPO5lFeAIE">Mawaa Enthaina Full Video Song | Guntur Kaaram |</a>
+                        <p class="invert">Aditya Music</p>
+                        <p class="invert">5.5M Views &bull; 2 months ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/thumbnail9.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=LxLf3G00DyM">Holi Returns | Ashish Chanchlani</a>
+                        <p class="invert">Ashish Chanchlani Vines</p>
+                        <p class="invert">41M Views &bull; 1 year ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/thumbnail5.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=OGjHGDEixAQ">Wedding Ka Season - Stand Up Comedy by Harsh Gujral</a>
+                        <p class="invert">Harsh Gujral</p>
+                        <p class="invert">8.5M Views &bull; 3 months ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/thumbnail2.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=fUmSkEvet08&t=285s">Profitable Web Development Road Map Step by Step-Code With Harry</a>
+                        <p class="invert">Code With Harry</p>
+                        <p class="invert">188K Views &bull; 3 days ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+video2.html:-
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Beauty at its Best Part-I</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="images/youtube-logo-1.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="flex-div">
+        <div class="nav-left">
+            <img class="invert" onclick="myfunction()" class="menu-icon" src="images/menu-01-stroke-rounded.svg" alt="">
+            <img class="invert" src="images/logo.svg" alt="" style="width: 90px;">
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input type="text" placeholder="Search">
+                <img src="images/search.png" alt="">
+            </div>
+            <img src="images/voice-search.png" alt="" class="mic-icon">
+        </div>
+        <div class="nav-right flex-div">
+            <img src="images/upload.png" alt="" style="width: 24px;">
+            <img src="images/notification.png" alt="" style="width: 24px;">
+            <img src="images/user-2.jpeg" alt="" class="user" style="width: 39px;border-radius: 34px;">
+        </div>
+    </nav>
+
+    <!-- Video Container -->
+    <div class="container play-container">
+        <div class="row">
+            <div class="play-video">
+                <video controls autoplay>
+                    <source src="videos/nature_video_2.mp4" type="video/mp4">
+                </video>
+                <h3>Natural Beauty at its Best Part-II</h3>
+                <div class="tags">
+                    <a href="">#Nature</a> <a href="">#New</a> <a href="">#Nature'sGoodness</a>
+                </div>
+                <div class="play-video-info">
+                    <p class="invert">18K Views &bull; 2 days ago</p>
+                    <div>
+                        <button><a href=""><img src="images/like.png" alt=""><p>725</p></a></button>
+                        <button><a href=""><img src="images/dislike.png" alt=""><p>2</p></a></button>
+                        <button><a href=""><img src="images/share.png" alt=""><p>Share</p></a></button>
+                        <button><a href=""><img class="invert" src="images/download-img.png" alt=""><p>Download</p></a></button>
+                    </div>
+                </div>
+                <hr>
+                <div class="publisher">
+                    <img src="images/nature.jpeg" alt="">
+                    <div>
+                        <p class="invert">Relaxation Film</p>
+                        <span class="invert">54K Subscribers</span>
+                    </div>
+                    <button type="button" class="join" style="background: #242222;
+                    color: white;outline: 0;border: 0;border-radius: 26px;" onmouseover="this.style.background='#333';" onmouseout="this.style.background='#242222';">Join</button>
+                    <button type="button" class="subscribe" style="background: white;
+                    color: black;outline: 0;border: 0;margin-left: 10px;border-radius: 26px;" onmouseover="this.style.background='rgb(232, 227, 227)';" onmouseout="this.style.background='white';">Subscribe</button>
+                </div>
+                <div class="vid-description">
+                    <p>Nature's beauty....</p>
+                    <p>Drone shot of beautiful Waterfall.Hope You Enjoy and liked it.If you liked it then make sure you subscribe my channel.</p>
+                    <p>Below given links are my social media handles:- </p>
+                </div>
+                <hr style="color: white;line-height: 18px;">
+                <h4>56 Comments</h4>
+                <div class="add-comments">
+                    <img src="images/user-2.jpeg" alt="">
+                    <input type="text" placeholder="Add Comment...">
+                </div>
+                <div class="old-comments">
+                    <img src="images/user-a.jpeg" alt="">
+                    <div>
+                        <h3>@ALBDev <span>2 days ago</span></h3>
+                        <p>Nice view brother...</p>
+                        <div class="acomment-action">
+                            <img src="images/like.png" alt="">
+                            <span>244</span>
+                            <img src="images/dislike.png" alt="">
+                            <span>12</span>
+                            <span>Reply</span>
+                            <a href="">All Replies</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="old-comments">
+                    <img src="images/user-b.jpeg" alt="">
+                    <div>
+                        <h3>DevOPS <span>2 weeks ago</span></h3>
+                        <p>Nice view brother...</p>
+                        <div class="acomment-action">
+                            <img src="images/like.png" alt="">
+                            <span>244</span>
+                            <img src="images/dislike.png" alt="">
+                            <span>12</span>
+                            <span>Reply</span>
+                            <a href="">All Replies</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="old-comments">
+                    <img src="images/user-c.jpeg" alt="">
+                    <div>
+                        <h3>Mr.Bean <span>9 days ago</span></h3>
+                        <p>Nice view brother...</p>
+                        <div class="acomment-action">
+                            <img src="images/like.png" alt="">
+                            <span>244</span>
+                            <img src="images/dislike.png" alt="">
+                            <span>12</span>
+                            <span>Reply</span>
+                            <a href="">All Replies</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-sidebar">
+                <div class="side-video-list">
+                    <img src="images/thumbnail6.png" alt="">
+                    <div class="vid-info">
+                        <a href="" class="small-thumbnail">Modern Cars</a>
+                        <p class="invert">World of Cars</p>
+                        <p class="invert">50K Views &bull; 2 weeks ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/thumbnail8.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=gh3FyLT7WVg">Kurchi Madathapetti Full Video Song | Guntur Kaaram |</a>
+                        <p class="invert">Aditya Music</p>
+                        <p class="invert">176M Views &bull; 2 months ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/Mawaa.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=5yPO5lFeAIE">Mawaa Enthaina Full Video Song | Guntur Kaaram |</a>
+                        <p class="invert">Aditya Music</p>
+                        <p class="invert">5.5M Views &bull; 2 months ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/thumbnail9.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=LxLf3G00DyM">Holi Returns | Ashish Chanchlani</a>
+                        <p class="invert">Ashish Chanchlani Vines</p>
+                        <p class="invert">41M Views &bull; 1 year ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/thumbnail5.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=OGjHGDEixAQ">Wedding Ka Season - Stand Up Comedy by Harsh Gujral</a>
+                        <p class="invert">Harsh Gujral</p>
+                        <p class="invert">8.5M Views &bull; 3 months ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/thumbnail2.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=fUmSkEvet08&t=285s">Profitable Web Development Road Map Step by Step-Code With Harry</a>
+                        <p class="invert">Code With Harry</p>
+                        <p class="invert">188K Views &bull; 3 days ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+video3.html:-
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Cars</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="images/youtube-logo-1.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="flex-div">
+        <div class="nav-left">
+            <img class="invert" onclick="myfunction()" class="menu-icon" src="images/menu-01-stroke-rounded.svg" alt="">
+            <img class="invert" src="images/logo.svg" alt="" style="width: 90px;">
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input type="text" placeholder="Search">
+                <img src="images/search.png" alt="">
+            </div>
+            <img src="images/voice-search.png" alt="" class="mic-icon">
+        </div>
+        <div class="nav-right flex-div">
+            <img src="images/upload.png" alt="" style="width: 24px;">
+            <img src="images/notification.png" alt="" style="width: 24px;">
+            <img src="images/user-2.jpeg" alt="" class="user" style="width: 39px;border-radius: 34px;">
+        </div>
+    </nav>
+
+    <!-- Video Container -->
+    <div class="container play-container">
+        <div class="row">
+            <div class="play-video">
+                <video controls autoplay>
+                    <source src="videos/cars_video_1.mp4" type="video/mp4">
+                </video>
+                <h3>Modern Cars</h3>
+                <div class="tags">
+                    <a href="">#Cars</a> <a href="">#New</a> <a href="">#Lambhorgini</a>
+                </div>
+                <div class="play-video-info">
+                    <p class="invert">50K Views &bull; 2 weeks ago</p>
+                    <div>
+                        <button><a href=""><img src="images/like.png" alt=""><p>10K</p></a></button>
+                        <button><a href=""><img src="images/dislike.png" alt=""><p>0</p></a></button>
+                        <button><a href=""><img src="images/share.png" alt=""><p>Share</p></a></button>
+                        <button><a href=""><img class="invert" src="images/download-img.png" alt=""><p>Download</p></a></button>
+                    </div>
+                </div>
+                <hr>
+                <div class="publisher">
+                    <img src="images/car2.jpeg" alt="">
+                    <div>
+                        <p class="invert">World of Cars</p>
+                        <span class="invert">94K Subscribers</span>
+                    </div>
+                    <button type="button" class="join" style="background: #242222;
+                    color: white;outline: 0;border: 0;border-radius: 26px;" onmouseover="this.style.background='#333';" onmouseout="this.style.background='#242222';">Join</button>
+                    <button type="button" class="subscribe" style="background: white;
+                    color: black;outline: 0;border: 0;margin-left: 10px;border-radius: 26px;" onmouseover="this.style.background='rgb(232, 227, 227)';" onmouseout="this.style.background='white';">Subscribe</button>
+                </div>
+                <div class="vid-description">
+                    <p>One of the most choiced car for everyone:- Lambhorgini.Hope You Enjoy and liked it.If you liked it then make sure you subscribe my channel.</p>
+                    <p>Below given links are my social media handles:- </p>
+                </div>
+                <hr style="color: white;line-height: 18px;">
+                <h4>56 Comments</h4>
+                <div class="add-comments">
+                    <img src="images/user-2.jpeg" alt="">
+                    <input type="text" placeholder="Add Comment...">
+                </div>
+                <div class="old-comments">
+                    <img src="images/user-a.jpeg" alt="">
+                    <div>
+                        <h3>@ALBDev <span>2 days ago</span></h3>
+                        <p>Nice view brother...</p>
+                        <div class="acomment-action">
+                            <img src="images/like.png" alt="">
+                            <span>244</span>
+                            <img src="images/dislike.png" alt="">
+                            <span>12</span>
+                            <span>Reply</span>
+                            <a href="">All Replies</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="old-comments">
+                    <img src="images/user-b.jpeg" alt="">
+                    <div>
+                        <h3>DevOPS <span>2 weeks ago</span></h3>
+                        <p>Nice view brother...</p>
+                        <div class="acomment-action">
+                            <img src="images/like.png" alt="">
+                            <span>244</span>
+                            <img src="images/dislike.png" alt="">
+                            <span>12</span>
+                            <span>Reply</span>
+                            <a href="">All Replies</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="old-comments">
+                    <img src="images/user-c.jpeg" alt="">
+                    <div>
+                        <h3>Mr.Bean <span>9 days ago</span></h3>
+                        <p>Nice view brother...</p>
+                        <div class="acomment-action">
+                            <img src="images/like.png" alt="">
+                            <span>244</span>
+                            <img src="images/dislike.png" alt="">
+                            <span>12</span>
+                            <span>Reply</span>
+                            <a href="">All Replies</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-sidebar">
+                <div class="side-video-list">
+                    <img src="images/thumbnail11.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=0-xnFm_TPQ0">DHONI GAMBHIR HANDSHAKE 😱😱 | RUSSELL CLOSING HIS EARS | CSK VS KKR 2024</a>
+                        <p class="invert">Tanay</p>
+                        <p class="invert">343K Views &bull; 10 hours ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/thumbnail8.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=gh3FyLT7WVg">Kurchi Madathapetti Full Video Song | Guntur Kaaram |</a>
+                        <p class="invert">Aditya Music</p>
+                        <p class="invert">176M Views &bull; 2 months ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/Mawaa.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=5yPO5lFeAIE">Mawaa Enthaina Full Video Song | Guntur Kaaram |</a>
+                        <p class="invert">Aditya Music</p>
+                        <p class="invert">5.5M Views &bull; 2 months ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/thumbnail9.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=LxLf3G00DyM">Holi Returns | Ashish Chanchlani</a>
+                        <p class="invert">Ashish Chanchlani Vines</p>
+                        <p class="invert">41M Views &bull; 1 year ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/thumbnail5.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=OGjHGDEixAQ">Wedding Ka Season - Stand Up Comedy by Harsh Gujral</a>
+                        <p class="invert">Harsh Gujral</p>
+                        <p class="invert">8.5M Views &bull; 3 months ago</p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <img src="images/thumbnail2.webp" alt="">
+                    <div class="vid-info">
+                        <a href="https://www.youtube.com/watch?v=fUmSkEvet08&t=285s">Profitable Web Development Road Map Step by Step-Code With Harry</a>
+                        <p class="invert">Code With Harry</p>
+                        <p class="invert">188K Views &bull; 3 days ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+style.css:-
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    background: black;
+}
+
+a{
+    text-decoration: none;
+    color: #5a5a5a;
+}
+
+img{
+    cursor: pointer;
+}
+
+.invert{
+    filter: invert(1);
+}
+
+.flex-div{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    padding: 10px 2%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background: rgb(22, 21, 21);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.nav-left img{
+    margin-right: 16px;
+}
+
+.nav-right img{
+    margin-right: 20px;
+}
+
+.nav-right .user{
+    margin-right: 0;
+}
+
+.nav-middle .mic-icon{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    background-color: #242222;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out
+}
+
+.nav-middle .mic-icon:hover {
+    background-color: #3a3838;
+}
+
+.nav-middle .search-box{
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 8px 12px;
+    border-radius: 25px;
+}
+
+.nav-middle .search-box img{
+    width: 18px;
+}
+
+.nav-middle .search-box input{
+    width: 400px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: white;
+}
+
+.sidebar{
+    width: 19%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding-left: 2%;
+    padding-top: 80px;
+    overflow: auto;
+}
+
+.shortcut a img{
+    width: 20px;
+    margin-right: 16px;
+}
+
+.shortcut a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in-out
+}
+
+.shortcut a:hover {
+    background: rgb(58, 55, 55);
+    width: 90%;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.shortcut p{
+    font-size: 12px;
+    color: whitesmoke;
+}
+
+.line {
+    height: 0.5px;
+    background-color: #3e3a3a;
+    margin: 8px 0;
+    width: 90%;
+}
+
+.shortcut .you{
+    margin-top: 14px;
+    width: 90%;
+    padding: 8px;
+    border-radius: 10px;
+    background: rgb(90, 87, 87);
+    transition: all 0.3s ease-in-out
+}
+
+.shortcut .you:hover{
+    background: rgb(58, 55, 55);
+}
+
+.subscribe-list a{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
+}
+
+.subscribe-list a img{
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+}
+
+.explore a{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
+}
+
+.extra{
+    margin-top: 14px;
+}
+
+.small-sidebar{
+    width: 6%;
+}
+
+.small-sidebar a p{
+    display: none;
+}
+
+.small-sidebar h2{
+    display: none;
+}
+
+.small-sidebar .line{
+    width: 80%;
+}
+
+/* main */
+.container{
+    padding-left: 21%;
+    padding-right: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.large-container{
+    padding-left: 8%;
+}
+
+.banner{
+    width: 100%;
+}
+
+.banner img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+.list-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 30px;
+    margin-top: 15px;
+}
+
+.vid-list .thumbnail{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.vid-list .flex-div{
+    align-items: flex-start;
+    margin-top: 7px;
+}
+
+.vid-list .flex-div img{
+    width: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.vid-info{
+    color: whitesmoke;
+    font-size: 13px;
+}
+
+.vid-info a{
+    color: #f0e3e3;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.vid-info p{
+    color: rgb(145, 137, 137);
+}
+
+@media (max-width:820px) {
+    .menu-icon{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+    }
+    .container,.large-container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .nav-right img{
+        display: none;
+    }
+    .nav-right .user{
+        display: block;
+        width: 30px;
+    }
+    .nav-middle .search-box input{
+        width: 150px;
+    }
+    .nav-middle .mic-icon{
+        display: none;
+    }
+    .logo{
+        width: 70px;
+    }
+}
+
+/* video making style */
+/* Video Container */
+.play-container{
+    padding-left: 4%;
+    padding-top: 2%;
+}
+ 
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+ 
+.play-video{
+    flex-basis: 69%;
+}
+ 
+.right-sidebar{
+    flex-basis: 30%;
+}
+ 
+.play-video video{
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid white;
+}
+
+.side-video-list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.side-video-list img{
+    width: 40%;
+    height: 34%;
+    border-radius: 5px;
+}
+
+.side-video-list .small-thumbnail{
+    flex-basis: 58%;
+}
+
+.side-video-list .vid-info{
+    flex-basis: 58%;
+}
+
+.side-video-list .vid-info a{
+    margin-left: 7px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.side-video-list .vid-info p{
+    margin-left: 7px;
+}
+
+.play-video h3{
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.play-video .tags a{
+    color: #0000ff;
+    font-size: 17px;
+}
+
+.play-video .play-video-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #5a5a5a;
+}
+
+.play-video .play-video-info a img{
+    width: 22px;
+    margin-right: 10px;
+}
+
+.play-video-info button{
+    padding: 8px 10px;
+    border-radius: 26px;
+    outline: 0;
+    border: 0;
+    background: #242222;
+}
+
+.play-video-info button:hover{
+    background: #333;
+}
+
+.play-video .play-video-info a{
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.play-video-info a p{
+    color: white;
+}
+
+.play-video hr{
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
+}
+
+.publisher{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.publisher div{
+    flex: .22;
+    line-height: 18px;
+}
+
+.publisher img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.publisher div p{
+    font-weight: 500;
+}
+
+.publisher div span{
+    font-size: 12px;
+    color: #5a5a5a;
+}
+
+.publisher button{
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: 0.5s linear;
+}
+
+.vid-description{
+    padding-left: 7px;
+    margin: 15px 0;
+    border: 1px solid white;
+    border-radius: 4px;
+    background: #212020;
+    padding-top: 3px;
+}
+
+.vid-description p{
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: white;
+}
+
+h4{
+    font-weight: 500;
+    font-size: 19px;
+    color: #807676;
+    margin-top: 10px;
+}
+
+.add-comments{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.add-comments img{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.add-comments input{
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding-top: 10px;
+    background: transparent;
+    color: white;
+}
+
+.old-comments{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.old-comments img{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.old-comments h3{
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.old-comments p{
+    color: white;
+    font-size: 12px;
+}
+
+.old-comments h3 span{
+    font-size: 12px;
+    color: #5a5a5a;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.old-comments .acomment-action{
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.old-comments .acomment-action img{
+    width: 20px;
+    margin-right: 5px;
+    border-radius: 0;
+}
+
+.old-comments .acomment-action span{
+    font-size: 12px;
+    color: #5a5a5a;
+    margin-right: 20px;
+}
+
+.old-comments .acomment-action a{
+    color: #0000ff;
+}
+
+@media (max-width: 820px){
+    .play-video{
+        flex-basis: 100%;
+    }
+    .right-sidebar{
+        flex-basis: 100%;
+    }
+    .play-container{
+        padding-left: 5%;
+    }
+    .vid-description{
+        padding-left: 0;
+    }
+    .play-video .play-video-info a{
+        margin-left: 0;
+        margin-right: 15px;
+        margin-top: 15px;
+    }
+}
+
+/* Width */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #333; /* Dark background color for the scrollbar track */
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #666; /* Darker color for the scrollbar handle */
+    border-radius: 5px; /* Rounded corners for the scrollbar handle */
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #999; /* Lighter color for the scrollbar handle on hover */
+}
