@@ -1,0 +1,76 @@
+# A stone,paper,scissor game
+
+# Here, I refer:-
+# 1 -> Stone
+# 2 -> Paper
+# 3-> Scissor
+
+import random
+import pyttsx3
+
+comp_score = 0
+user_score = 0
+draw_score = 0
+
+engine = pyttsx3.init("sapi5")
+voices = engine.getProperty('voices')
+print(voices[0].id)
+engine.setProperty('voice', voices[0].id)
+name = input("Enter Name: ")
+engine.say(f"Hey {name} , Welcome to Stone Paper Scissors")
+engine.say("Let's start the game")
+engine.runAndWait()
+
+def check(comp,user):
+    global comp_score,user_score,draw_score
+    if comp == user:
+        draw_score += 1
+        return 0
+    elif comp == 2 and user == 1:
+        comp_score += 1
+        return -1
+    elif comp == 3 and user == 2:
+        comp_score += 1
+        return -1
+    elif comp == 1 and user == 3:
+        comp_score += 1
+        return -1
+    else:
+        user_score += 1
+        return 1
+
+for i in range(0,10):
+    comp = random.randint(1,3)
+    user = int(input("Choose 1 for Stone, 2 for Paper, 3 for Scissor:\n"))
+    score = check(comp, user)
+    print("You choose",user)
+    print("Computer choose",comp)
+    if score == 0:
+       print(f"It's a draw in round {i+1}")
+       engine.say(f"It's a draw in round {i+1}")
+       engine.runAndWait()
+    elif score == 1:
+       print(f"You win the round {i+1}!!")
+       engine.say(f"You win the round {i+1}!!")
+       engine.runAndWait()
+    else:
+       print(f"You lose the round {i+1}!!")
+       engine.say(f"You lose the round {i+1}!!")
+       engine.runAndWait()
+
+    print("Computer score is",comp_score)
+    print("Draw Score:",draw_score)
+    print("User score is",user_score)
+
+if comp_score > user_score :
+    print("\nComputer wins the game!!, Better luck next time.")
+    engine.say("Computer wins the game!!, Better luck next time.")
+    engine.runAndWait()
+elif comp_score < user_score :
+    print("\nUser wins the game!!, That was a good game.")
+    engine.say("User wins the game!!, That was a good game.")
+    engine.runAndWait()
+else:
+    print("\nPhew !! It's a tie game, That was a challenging one.")
+    engine.say("Phew !! It's a tie game, That was a challenging one.")
+    engine.runAndWait()
