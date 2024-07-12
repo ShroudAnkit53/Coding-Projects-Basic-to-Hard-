@@ -7,6 +7,8 @@ import wikipedia
 import webbrowser
 import os
 import requests
+import pyjokes
+import json
 
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty('voices')
@@ -14,11 +16,15 @@ print(voices[0].id)
 engine.setProperty('voice', voices[0].id)
 
 # Add the function for the device to say something
+
+
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
 
 # J.A.R.V.I.S will wish me
+
+
 def wishMe():
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour < 12:
@@ -31,6 +37,8 @@ def wishMe():
     speak("Hello I am Jarvis. What can I help you ?")
 
 # J.A.R.V.I.S will listen and respond to the user's commands
+
+
 def takeCommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
@@ -55,49 +63,96 @@ def takeCommand():
         return "None"
     return query
 
+
 if __name__ == "__main__":
     wishMe()
     if 1:
-       query = takeCommand().lower()
+        query = takeCommand().lower()
 
-       # Logic for executing tasks based on query
-       if 'wikipedia' in query:
-           speak('Searching wikipedia....')
-           query = query.replace('wikipedia','  ')
-           results = wikipedia.summary(query, sentences=3)
-           speak("According to Wikipedia...")
-           print(results)
-           speak(results)
+        # Logic for executing tasks based on query
+        if 'wikipedia' in query:
+            speak('Searching wikipedia....')
+            query = query.replace('wikipedia', '  ')
+            results = wikipedia.summary(query, sentences=3)
+            speak("According to Wikipedia...")
+            print(results)
+            speak(results)
 
-       elif 'open youtube' in query:
-           webbrowser.open('youtube.com')
+        elif 'open youtube' in query:
+            webbrowser.open('youtube.com')
 
-       elif 'open google' in query:
-           webbrowser.open('google.com')
+        elif 'open google' in query:
+            webbrowser.open('google.com')
 
-       elif 'play music' in query:
-           music_dir = 'C:\\Music'
-           songs = os.listdir(music_dir)
-           print(songs)
-           os.startfile(os.path.join(music_dir, songs[1]))
+        elif 'play music' in query:
+            music_dir = 'C:\\Music'
+            songs = os.listdir(music_dir)
+            print(songs)
+            os.startfile(os.path.join(music_dir, songs[24]))
 
-       elif 'the time' in query:
-           strTime = datetime.datetime.now().strftime("%H:%M:%S")
-           speak(f"Sir, The time is {strTime}")
+        elif 'the time' in query:
+            strTime = datetime.datetime.now().strftime("%H:%M:%S")
+            speak(f"Sir, The time is {strTime}")
 
-       elif 'news' in query:
-           r = requests.get('https://newsapi.org/v2/everything?q=icct20wc&from=2024-06-07&sortBy=publishedAt&apiKey=e93e0a16480b4c99967280280b1719f1')
+        elif 'news' in query:
+            speak("Which news do you want to know about?")
+            r = sr.Recognizer()
+            with sr.Microphone() as source:
+               print("Listening....")
+               r.pause_threshold = 1
+               audio = r.listen(source)
 
-           if r.status_code == 200:
-               data = r.json()
+            try:
+               print("Recognizing....")
+               topic = r.recognize_google(audio, language='en-in')
+               print(f"User said: {topic}")
 
-               articles = data.get("articles", [])
+               url = f"https://newsapi.org/v2/top-headlines?country=in&category={topic}&apiKey=e93e0a16480b4c99967280280b1719f1"
+               r = requests.get(url)
+               if r.status_code == 200:
+                data = r.json()
 
-               for article in articles:
-                   speak(article.get('title'))
-                   print(article.get('title'))
-                   speak(article.get('description'))
-                   print(article.get('description'))
+                articles = data.get("articles", [])
+
+                for article in articles:
+                    print(article.get('title'))
+                    speak(article.get('title'))
+                    print(article.get('description'))
+                    speak(article.get('description'))
+            except Exception as e:
+               print(e)
+
+
+        elif 'joke' in query:
+            jokes = pyjokes.get_joke()
+            print(jokes)
+            speak(jokes)
+
+        elif 'weather' in query:
+            speak("Which city do you want to know about the weather ?")
+            r = sr.Recognizer()
+            with sr.Microphone() as source:
+               print("Listening....")
+               r.pause_threshold = 1
+               audio = r.listen(source)
+
+            try:
+               print("Recognizing....")
+               city = r.recognize_google(audio, language='en-in')
+               print(f"User said: {city}")
+
+               url = f"https://api.weatherapi.com/v1/current.json?key=11a2c9f2d2be428a845151929241207&q={city}"
+               r = requests.get(url)
+               weather = json.loads(r.text)
+               temp = weather["current"]["temp_c"]
+               wind = weather["current"]["wind_kph"]
+               condition = weather["current"]["condition"]["text"]
+               print(f"The current temperature in {city} is {temp}°C with wind speed of {wind} km/h and condition of {condition}")
+               speak(f"The current temperature in {city} is {temp}°C with wind speed of {wind} km/h and condition of {condition}")
+
+            except Exception as e:
+               print(e)
+
 
     
 
