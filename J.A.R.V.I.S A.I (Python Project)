@@ -9,6 +9,7 @@ import os
 import requests
 import pyjokes
 import json
+import pywhatkit
 
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty('voices')
@@ -17,13 +18,11 @@ engine.setProperty('voice', voices[0].id)
 
 # Add the function for the device to say something
 
-
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
 
 # J.A.R.V.I.S will wish me
-
 
 def wishMe():
     hour = int(datetime.datetime.now().hour)
@@ -34,10 +33,9 @@ def wishMe():
     else:
         speak("Good Evening,Ankit")
 
-    speak("Hello I am Jarvis. What can I help you ?")
+    speak("Hello I am Jarvis. What can I help you today?")
 
 # J.A.R.V.I.S will listen and respond to the user's commands
-
 
 def takeCommand():
     r = sr.Recognizer()
@@ -63,7 +61,6 @@ def takeCommand():
         return "None"
     return query
 
-
 if __name__ == "__main__":
     wishMe()
     if 1:
@@ -73,7 +70,7 @@ if __name__ == "__main__":
         if 'wikipedia' in query:
             speak('Searching wikipedia....')
             query = query.replace('wikipedia', '  ')
-            results = wikipedia.summary(query, sentences=3)
+            results = wikipedia.summary(query, sentences=10)
             speak("According to Wikipedia...")
             print(results)
             speak(results)
@@ -85,23 +82,22 @@ if __name__ == "__main__":
             webbrowser.open('google.com')
 
         elif 'play music' in query:
-            music_dir = 'E:\\Music'
-            songs = os.listdir(music_dir)
-            # print(songs)
-            # os.startfile(os.path.join(music_dir, songs[24]))
-            print("Available songs:")
-            for i, song in enumerate(songs):
-                print(f"{i + 1}. {song}")
-    
+            speak("Which music do you want to listen?")
+            r = sr.Recognizer()
+            with sr.Microphone() as source:
+                print("Listening....")
+                r.pause_threshold = 1
+                audio = r.listen(source)
+
             try:
-              choice = int(input("Enter the number of the song you want to play: ")) - 1
-              if 0 <= choice < len(songs):
-                print(f"Playing: {songs[choice]}")
-                os.startfile(os.path.join(music_dir, songs[choice]))
-              else:
-                print("Invalid choice. Please enter a valid number.")
-            except ValueError:
-               print("Invalid input. Please enter a number.")
+                print("Recognizing....")
+                song = r.recognize_google(audio, language = 'en-in')
+                print("Playing " + song)
+                speak("Playing " + song)
+                pywhatkit.playonyt(song)
+
+            except Exception as e:
+                print(e)
 
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
@@ -111,30 +107,29 @@ if __name__ == "__main__":
             speak("Which news do you want to know about?")
             r = sr.Recognizer()
             with sr.Microphone() as source:
-               print("Listening....")
-               r.pause_threshold = 1
-               audio = r.listen(source)
+                print("Listening....")
+                r.pause_threshold = 1
+                audio = r.listen(source)
 
             try:
-               print("Recognizing....")
-               topic = r.recognize_google(audio, language='en-in')
-               print(f"User said: {topic}")
+                print("Recognizing....")
+                topic = r.recognize_google(audio, language='en-in')
+                print(f"User said: {topic}")
 
-               url = f"https://newsapi.org/v2/top-headlines?country=in&category={topic}&apiKey=e93e0a16480b4c99967280280b1719f1"
-               r = requests.get(url)
-               if r.status_code == 200:
-                data = r.json()
+                url = f"https://newsapi.org/v2/top-headlines?country=in&category={topic}&apiKey=e93e0a16480b4c99967280280b1719f1"
+                r = requests.get(url)
+                if r.status_code == 200:
+                    data = r.json()
 
-                articles = data.get("articles", [])
+                    articles = data.get("articles", [])
 
-                for article in articles:
-                    print(article.get('title'))
-                    speak(article.get('title'))
-                    print(article.get('description'))
-                    speak(article.get('description'))
+                    for article in articles:
+                        print(article.get('title'))
+                        speak(article.get('title'))
+                        print(article.get('description'))
+                        speak(article.get('description'))
             except Exception as e:
-               print(e)
-
+                print(e)
 
         elif 'joke' in query:
             jokes = pyjokes.get_joke()
@@ -145,28 +140,25 @@ if __name__ == "__main__":
             speak("Which city do you want to know about the weather ?")
             r = sr.Recognizer()
             with sr.Microphone() as source:
-               print("Listening....")
-               r.pause_threshold = 1
-               audio = r.listen(source)
+                print("Listening....")
+                r.pause_threshold = 1
+                audio = r.listen(source)
 
             try:
-               print("Recognizing....")
-               city = r.recognize_google(audio, language='en-in')
-               print(f"User said: {city}")
+                print("Recognizing....")
+                city = r.recognize_google(audio, language='en-in')
+                print(f"User said: {city}")
 
-               url = f"https://api.weatherapi.com/v1/current.json?key=11a2c9f2d2be428a845151929241207&q={city}"
-               r = requests.get(url)
-               weather = json.loads(r.text)
-               temp = weather["current"]["temp_c"]
-               wind = weather["current"]["wind_kph"]
-               condition = weather["current"]["condition"]["text"]
-               print(f"The current temperature in {city} is {temp}°C with wind speed of {wind} km/h and condition of {condition}")
-               speak(f"The current temperature in {city} is {temp}°C with wind speed of {wind} km/h and condition of {condition}")
+                url = f"https://api.weatherapi.com/v1/current.json?key=11a2c9f2d2be428a845151929241207&q={city}"
+                r = requests.get(url)
+                weather = json.loads(r.text)
+                temp = weather["current"]["temp_c"]
+                wind = weather["current"]["wind_kph"]
+                condition = weather["current"]["condition"]["text"]
+                print(
+                    f"The current temperature in {city} is {temp}°C with wind speed of {wind} km/h and condition of {condition}")
+                speak(
+                    f"The current temperature in {city} is {temp}°C with wind speed of {wind} km/h and condition of {condition}")
 
             except Exception as e:
-               print(e)
-
-
-    
-
-    
+                print(e)
